@@ -1,0 +1,7 @@
+# Ignore build outputs for all projects
+*/build/
+*.o
+*.bin
+*.elf
+*.hex
+*.ninja_log
