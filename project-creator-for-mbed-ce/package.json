@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "publisher": "constantinCS",
   "icon": "logo.jpg",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/constantinbarba/mbed",
