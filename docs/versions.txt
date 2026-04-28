@@ -1,0 +1,10 @@
+cmake --version
+ninja --version
+arm-none-eabi-gcc --version
+git --version
+python --version
+
+mkdir build & cd build
+cmake .. -GNinja -DCMAKE_BUILD_TYPE=Develop -DMBED_TARGET=NUCLEO_L152RE
+ninja
+ninja flash-(projectname)

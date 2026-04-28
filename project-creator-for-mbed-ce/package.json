@@ -1,0 +1,39 @@
+{
+  "name": "project-creator-for-mbed-ce",
+  "displayName": "Project Creator for Mbed CE",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "constantinCS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/constantinbarba/mbed",
+    "directory": "mbed/project-creator-for-mbed-ce"
+  },
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "initialize.createMbedProject",
+      "title": "Mbed CE: Create new Project"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.116.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

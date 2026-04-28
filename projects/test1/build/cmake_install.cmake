@@ -1,4 +1,4 @@
-# Install script for directory: D:/CSHome/Mbed/projects/test1
+# Install script for directory: F:/CSHome/Mbed/projects/test1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,18 +34,18 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/CSHome/_Tools/14.3rel1/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "F:/CSHome/_Tools/arm_gnu/bin/arm-none-eabi-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/CSHome/Mbed/projects/test1/build/build/mbed-os-test1/cmake_install.cmake")
+  include("F:/CSHome/Mbed/projects/test1/build/build/mbed-os-build/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/CSHome/Mbed/projects/test1/build/install_local_manifest.txt"
+  file(WRITE "F:/CSHome/Mbed/projects/test1/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -61,6 +61,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/CSHome/Mbed/projects/test1/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "F:/CSHome/Mbed/projects/test1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
