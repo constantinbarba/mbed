@@ -19,9 +19,6 @@ For a step-by-step setup, please refer to the official [Getting Started Guide](h
 
 ## Change Log
 
-### 1.0.1
-- Improved project initialization logic.
-- Updated documentation links.
 
 ### 1.0.0
 - First release of the Mbed CE Project Creator.

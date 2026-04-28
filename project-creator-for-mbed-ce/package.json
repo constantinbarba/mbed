@@ -2,7 +2,7 @@
   "name": "project-creator-for-mbed-ce",
   "displayName": "Project Creator for Mbed CE",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "constantinCS",
   "icon": "logo.jpg",
   "license": "MIT",
