@@ -581,8 +581,6 @@ _Python3_EXECUTABLE_DEBUG:INTERNAL=_Python3_EXECUTABLE_DEBUG-NOTFOUND
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;13;64;<none>;cp313-win_amd64.pyd;;C:/Users/const/AppData/Local/Python/pythoncore-3.13-64/Lib;F:/CSHome/Mbed/tools_mbed/mbed-os/venv/Lib;F:/CSHome/Mbed/tools_mbed/mbed-os/venv/Lib/site-packages;F:/CSHome/Mbed/tools_mbed/mbed-os/venv/Lib/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=bbe2bc9a47be83ca64f854f1777a18d8
-//Interpreter reason failure
-_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

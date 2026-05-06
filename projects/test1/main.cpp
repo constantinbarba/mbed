@@ -6,6 +6,6 @@ int main(){
 
     while(true){
         led=!led;
-        ThisThread::sleep_for(100ms);
+        ThisThread::sleep_for(1000ms);
     }
 }

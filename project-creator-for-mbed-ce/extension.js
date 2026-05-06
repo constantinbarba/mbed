@@ -70,7 +70,7 @@ function activate(context) {
 			console.log("N-Formatted Mbed OS Path for CMake: ", formattedMbedPath);
 		}
 
-		vscode.window.showInformationMessage(`Creating Mbed CE project "${projectName}" at "${projectPath[0].fsPath}" with Mbed OS  ${mbedInstalled.label === 'Yes' ? "already installed" : "installed along with the project"}.`);
+		
 
 		if(!fs.existsSync(projectPath[0].fsPath)){
 			vscode.window.showErrorMessage(`Error: The folder ${projectPath[0].fsPath} no longer exists!`);
@@ -84,16 +84,11 @@ function activate(context) {
 			return;
 		} else {
 			try {
+				vscode.window.showInformationMessage(`Creating Mbed CE project "${projectName}" at "${projectPath[0].fsPath}" with Mbed OS  ${mbedInstalled.label === 'Yes' ? "already installed" : "installed along with the project"}.`);
 			//1. Create projects directory
 			fs.mkdirSync(projectDir);
 			console.log(`1.Created project directory: ${projectDir}`);
-			
-			//1b. Add project to workspace(sidebar)
-			vscode.workspace.updateWorkspaceFolders(
-				vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders.length : 0,
-				0,
-				{ uri: vscode.Uri.file(projectPath[0].fsPath) } // only see project folder, replace to { uri: vscode.Uri.file(projectDir) }
-			)
+
 
 				//2. Create main.cpp with boilerplate code
 			const mainCppPath = path.join(projectDir, 'main.cpp');
@@ -189,7 +184,6 @@ Happy coding!
 				}, async (progress) => {
 					progress.report({message: "Initializing git repository..."});
 					const options = {cwd: projectDir};
-					await execAsync('git init', options);
 					progress.report({message: "Adding Mbed OS as a submodule..."});
 					await execAsync('git submodule add  https://github.com/mbed-ce/mbed-os.git mbed-os', options);
 
@@ -203,7 +197,7 @@ Happy coding!
 				cwd: buildPath,
 				name: `${projectName} Build Terminal` 
 			});
-			terminal.show();
+			terminal.show(true);
 
 			vscode.window.showInformationMessage(`Project ${projectName} is ready!`);
 		} catch (error) {

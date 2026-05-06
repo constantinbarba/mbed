@@ -3,11 +3,11 @@ cmake_policy(VERSION 3.19...3.22)
 
 set(MBED_APP_JSON_PATH mbed_app.json5)
 
-include(f:/CSHome/Mbed/tools_mbed/mbed-os/tools/cmake/mbed_toolchain_setup.cmake)
+include(../_Mbed-OS_Versions/mbed-os_7.0.0/tools/cmake/mbed_toolchain_setup.cmake)
 project(test1 LANGUAGES C CXX ASM) 
 include(mbed_project_setup)
 
-add_subdirectory(f:/CSHome/Mbed/tools_mbed/mbed-os build/mbed-os-build)
+add_subdirectory(../_Mbed-OS_Versions/mbed-os_7.0.0 build/mbed-os-build)
 
 add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} mbed-os) # Can also link to mbed-baremetal here
