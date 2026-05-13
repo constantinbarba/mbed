@@ -23,4 +23,4 @@ For a step-by-step setup, please refer to the official [Getting Started Guide](h
 - First release of the Mbed CE Project Creator.
 
 ### 1.0.1
-- Fixed bugs
+- Fixed bugs.
