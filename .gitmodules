@@ -1,36 +1,3 @@
-[submodule "tools_mbed/mbed-os"]
-	path = tools_mbed/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/test56/mbed-os"]
-	path = projects/test56/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/test555/mbed-os"]
-	path = projects/test555/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/test443414/mbed-os"]
-	path = projects/test443414/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/test4325353/mbed-os"]
-	path = projects/test4325353/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/tets2/mbed-os"]
-	path = projects/tets2/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/tes23/mbed-os"]
-	path = projects/tes23/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/tes4343/mbed-os"]
-	path = projects/tes4343/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/tefd2/mbed-os"]
-	path = projects/tefd2/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/tesfdcx/mbed-os"]
-	path = projects/tesfdcx/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/teyyy/mbed-os"]
-	path = projects/teyyy/mbed-os
-	url = https://github.com/mbed-ce/mbed-os.git
-[submodule "projects/test123/mbed-os"]
-	path = projects/test123/mbed-os
+[submodule "_Mbed-OS_Versions/mbed-os"]
+	path = projects/_Mbed-OS_Versions/mbed-os_7.0.0
 	url = https://github.com/mbed-ce/mbed-os.git
