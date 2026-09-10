@@ -1,4 +1,6 @@
-node_modules
-.vscode-test/
+.vscode/**
+.vscode-test.mjs
+eslint.config.mjs
+jsconfig.json
 *.vsix
-.env
+.gitignore

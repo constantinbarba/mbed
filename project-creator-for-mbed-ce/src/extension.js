@@ -13,8 +13,8 @@ const execAsync = promisify(exec); // This lets us use "await" with git commands
  */
 function activate(context) {
 
-	const disposable = vscode.commands.registerCommand('initialize.createMbedProject', async () => {
-		const projectPath = await vscode.window.showOpenDialog({
+	const disposable = vscode.commands.registerCommand('initialize.createMbedProject', async () => { // intialize.createMbedProject is the command ID defined in package.json
+		const projectPath = await vscode.window.showOpenDialog({ // Shows a dialog to select the project folder 
 			canSelectFolders: true,
 			canSelectFiles: false,
 			canSelectMany: false,
@@ -26,13 +26,13 @@ function activate(context) {
 			vscode.window.showErrorMessage("No folder selected. Please select a folder to create your Mbed CE project.");
 			return;
 		}
-			console.log("projectPath:", projectPath[0].fsPath);
+			
 
 		let projectName = await vscode.window.showInputBox({
     	placeHolder: "Enter your Mbed CE project name"
 		});
 		if (!projectName) return;
-		console.log("projectName:", projectName);
+		
 
 		const mbedInstalled = await vscode.window.showQuickPick([
 			{label: 'Yes', description: ""}, 
@@ -40,10 +40,6 @@ function activate(context) {
 		], {
     		placeHolder: "Is Mbed OS already installed on your PC?"
 		});
-
-		if(!mbedInstalled || mbedInstalled.label == 'No'){
-			// create git thingy
-		}
 
 		const projectDir = path.join(projectPath[0].fsPath, projectName);
 
@@ -61,9 +57,9 @@ function activate(context) {
 				return;
 			}
 			mbedOSPath = mbedPath[0].fsPath;
-			console.log("mbedOSPath:", mbedOSPath);
+			
 			formattedMbedPath = mbedOSPath.replace(/\\/g, '/'); // Convert backslashes to forward slashes for CMake
-			console.log("Y-Formatted Mbed OS Path for CMake:", formattedMbedPath);
+			
 		} else {
 			
 			formattedMbedPath = 'mbed-os'; 
@@ -174,22 +170,22 @@ Happy coding!
 				vscode.window.showTextDocument(doc, { preview: false });
 			});
 
-			//6: If Mbed OS is not installed, initialize git and add Mbed OS as a submodule
+			//6: If Mbed OS is not installed, initialize git and add Mbed OS as a Clone
 			if(mbedInstalled && mbedInstalled.label === 'No'){
 
 				await vscode.window.withProgress({
 					location: vscode.ProgressLocation.Notification,
-					title: "Setting up Mbed OS submodule...",
+					title: "Setting up Mbed OS Clone...",
 					cancellable: false
 				}, async (progress) => {
-					progress.report({message: "Initializing git repository..."});
+					progress.report({message: "Cloning Mbed OS repository..."});
 					const options = {cwd: projectDir};
-					progress.report({message: "Adding Mbed OS as a submodule..."});
-					await execAsync('git submodule add  https://github.com/mbed-ce/mbed-os.git mbed-os', options);
+					progress.report({message: "Adding Mbed OS as a Clone..."});
+					await execAsync('git clone --depth 1 --branch mbed-os-7.0.0 --recurse-submodules https://github.com/mbed-ce/mbed-os.git mbed-os', options);
 
 			});
-			vscode.window.showInformationMessage("Mbed OS submodule setup complete!");
-			console.log("6. Initialized git repository and added Mbed OS as a submodule.");
+			vscode.window.showInformationMessage("Mbed OS Clone setup complete!");
+			
 		}
 
 		//7. Open terminal in build directory

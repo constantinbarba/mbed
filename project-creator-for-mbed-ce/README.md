@@ -16,11 +16,3 @@ A streamlined tool for VS Code that simplifies the creation and management of Mb
 For a step-by-step setup, please refer to the official [Getting Started Guide](https://mbed-ce.dev/getting-started/toolchain-install/) or follow the video tutorial below:
 
 - **Video Tutorial**: [Mbed CE Toolchain Installation Guide](https://www.youtube.com/watch?v=mTTktjTeiOo)
-
-## Change Log
-
-### 1.0.0
-- First release of the Mbed CE Project Creator.
-
-### 1.0.1
-- Fixed bugs.
